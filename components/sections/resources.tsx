@@ -20,7 +20,7 @@ export const Resources = () => {
                 <p>On-chain registry verifying agent capabilities and performance</p>
                 <p>EVM compatibility for maximum reach and utility</p>
               </div>
-              <Button className="mt-3" variant="primary" size="lg">
+              <Button className="mt-3" variant="primary">
                 View Roadmap
               </Button>
             </div>
@@ -35,7 +35,7 @@ export const Resources = () => {
                 <p>Technical resources and support from leading builders</p>
                 <p>Direct access to protocol partners and integration opportunities</p>
               </div>
-              <Button className="mt-3" variant="primary" size="lg">
+              <Button className="mt-3" variant="primary">
                 Learn More
               </Button>
             </div>
@@ -50,7 +50,7 @@ export const Resources = () => {
                 <p>Marketing and growth resources</p>
                 <p>Integration support for existing agents</p>
               </div>
-              <Button className="mt-3" variant="primary" size="lg">
+              <Button className="mt-3" variant="primary">
                 Coming Soon...
               </Button>
             </div>

@@ -25,7 +25,7 @@ export default function TokenLaunch() {
                 Join Discord for Launch
               </Button>
               <Button 
-                variant="outline" 
+                variant="secondary" 
                 onClick={scrollToHowTo}
               >
                 How to Participate
@@ -220,7 +220,7 @@ export default function TokenLaunch() {
                 <Button className="bg-purple-600 hover:bg-purple-700">
                   Enter Discord
                 </Button>
-                <Button variant="outline">
+                <Button variant="secondary">
                   View Technical Documentation
                 </Button>
               </div>

@@ -1,12 +1,25 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { Twitter, Discord, Linkedin } from 'lucide-react'
-import { TwitterIcon, DiscordIcon, LinkedinIcon } from 'lucide-react'
+import { Twitter, Linkedin } from 'lucide-react'
+import { TwitterIcon, LinkedinIcon } from 'lucide-react'
 
 export default function About() {
 
   // Team member component for reusability
-  const TeamMember = ({ name, role, image, social = {} }) => (
+  interface SocialLinks {
+    twitter?: string;
+    discord?: string;
+    linkedin?: string;
+  }
+
+  interface TeamMemberProps {
+    name: string;
+    role: string;
+    image: string;
+    social?: SocialLinks;
+  }
+
+  const TeamMember: React.FC<TeamMemberProps> = ({ name, role, image, social = {} }) => (
     <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-sm">
       <img 
         src={image || "/api/placeholder/150/150"} 
@@ -345,7 +358,7 @@ export default function About() {
                 Join the Decentralized Agent Revolution
               </h2>
               <div className="flex justify-center">
-                <Button variant="primary" size="lg">
+                <Button variant="primary">
                   Get Building
                 </Button>
               </div>
