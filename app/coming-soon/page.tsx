@@ -10,7 +10,7 @@ export default function ComingSoon() {
           We're working hard to bring you something amazing.
         </p>
         <Link href="/">
-          <Button variant="primary" className="bg-white text-black hover:bg-gray-200">
+          <Button variant="primary" className="w-full text-black hover:bg-gray-200">
             Back to Home
           </Button>
         </Link>

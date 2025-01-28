@@ -10,30 +10,30 @@ const navigationItems = [
     name: 'About',
     items: [
       { name: 'Meet Mother', href: '/meet-mother' },
-      { name: 'DAO', href: '/dao' },
-      { name: '$MAMA', href: '/mama-token' },
-      { name: 'Blog (Mirror)', href: '/blog' },
-      { name: 'Contact (form)', href: '/contact' },
+      { name: 'DAO', href: '/coming-soon' },
+      { name: '$MAMA', href: '/coming-soon' },
+      { name: 'Blog (Mirror)', href: '/coming-soon' },
+      { name: 'Contact (form)', href: '/coming-soon' },
     ],
   },
   {
     name: 'Developer',
     items: [
-      { name: 'Agent Starter Kit', href: '/agent-starter-kit' },
-      { name: 'Node setup', href: '/node-setup' },
-      { name: 'Integrations', href: '/integrations' },
+      { name: 'Agent Starter Kit', href: '/coming-soon' },
+      { name: 'Node setup', href: '/coming-soon' },
+      { name: 'Integrations', href: '/coming-soon' },
       { name: 'Protocol', href: '/protocol' },
     ],
   },
   {
     name: 'Community',
     items: [
-      { name: 'Talk to Agent', href: '/talk-to-agent' },
-      { name: 'Intern', href: '/intern' },
-      { name: 'Mother', href: '/mother' },
-      { name: 'Community', href: '/community' },
-      { name: 'Dev Rel', href: '/dev-rel' },
-      { name: 'Bounty', href: '/bounty' },
+      { name: 'Talk to Agent', href: '/coming-soon' },
+      { name: 'Intern', href: '/coming-soon' },
+      { name: 'Mother', href: '/coming-soon' },
+      { name: 'Community', href: '/coming-soon' },
+      { name: 'Dev Rel', href: '/coming-soon' },
+      { name: 'Bounty', href: '/coming-soon' },
     ],
   },
 ]
@@ -84,12 +84,14 @@ export function Navbar() {
             ))}
 
             {/* Manifesto Button */}
+            <Link href="/coming-soon">
             <Button
               variant="primary"
               className="text-black hover:bg-gray-200"
             >
               Manifesto
             </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -143,12 +145,15 @@ export function Navbar() {
               
               {/* Manifesto Button for Mobile */}
               <div className="px-3 py-2">
+
+                <Link href="/coming-soon">
                 <Button
                   variant="primary"
                   className="w-full text-black hover:bg-gray-200"
                 >
                   Manifesto
                 </Button>
+                </Link>
               </div>
             </div>
           </div>
