@@ -5,8 +5,8 @@ import { Footer } from '@/components/footer'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Mother',
-  description: 'Accelerate growth. Simplify grants.',
+  title: 'Mother | The Agent Co-op and Launchpad',
+  description: 'Experience a full suite of tools that streamline your grants workflow.',
 }
 
 export default function RootLayout({

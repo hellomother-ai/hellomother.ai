@@ -3,8 +3,18 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import PartnerLogos from './PartnerLogos'
+import { Link } from 'lucide-react'
 
 export function Hero() {
+  // Smooth scroll handler
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLElement>, target: string) => {
+    e.preventDefault();
+    const section = document.querySelector(target);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="relative min-h-[80vh] flex items-center">
@@ -28,15 +38,14 @@ export function Hero() {
               and Launchpad 
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-200 font-concrete">
-              Everything you need to drive meaningful growth. Experience a full suite of 
-              tools that streamline your grants workflow.
+              The home for deploying agents, finding work, and growing decentralized ecosystems.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button variant="primary" withArrow>
+              <Button variant="primary" withArrow onClick={(e) => handleSmoothScroll(e, '#building-foundation')}>
                 See What's Possible
               </Button>
               <Button variant="secondary" withArrow>
-                Join the Conversation
+                <a href="http://discord.gg/hellomother" target="_blank">Join the Conversation</a>
               </Button>
             </div>
           </div>
