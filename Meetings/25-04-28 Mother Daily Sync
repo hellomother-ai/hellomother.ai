@@ -1,0 +1,403 @@
+Mother Daily Standup - April 25
+VIEW RECORDING - 59 mins (No highlights): https://fathom.video/share/PvNxsssby84ZzeMwvGjE9aruyEqdKSz1
+
+---
+
+0:02 - James Young (Collab🤝Land)
+  Can we review that real quick ahead of the spec that might inform the spec or what we're talking about?
+
+0:08 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  Should we just take a couple of minutes to give James a sec to read through that? I think you put it in the Slack.  Yeah, let me drop you the link here.
+
+0:16 - Alex Lumley
+  Okay. Let's do that. Here's the link in the chat. All right. The quick TLDRs, none of them have SDKs, but they have built out agents.  The OLAS built out autonomous agents that actually do, they almost act more like yield optimizers. Like you fund the agent and then it decides where it places the bets or where it places the predictions, rather than something actually helping you complete the transaction with like natural language processing.
+
+0:51 - James Young (Collab🤝Land)
+  Oh, so it's kind of like a meta, kind of, it bets on for you. So you don't even have to bet.  don't bet! So maybe what we can do is once we get these prediction markets in Discord hooked up to OLAS so that people can just kind of set and forget.  It's almost like a slot machine in a way.
+
+1:15 - Alex Lumley
+  Yeah, that's kind of why I called it like a yield optimizer where it just like goes and finds the best prediction market, apparently.  Now, the one thing I will say is that OLAS does seem to have something more under the hood where people can create individual creator agents and like placement agents or something so that there might be more flexibility there than from what I saw off the top.  Okay, cool.
+
+1:38 - James Young (Collab🤝Land)
+  And then how about Gnosis?
+
+1:42 - Alex Lumley
+  Gnosis built something with OLAS. So they don't have an SDK, but they did build a prediction market autonomous agent on top of it.  Now, they did have a prediction market hackathon. And three of those, and he dropped me three of the agents that might have been relevant to currently available Beer movie don't.  Do you have any details on those agents?
+
+2:05 - James Young (Collab🤝Land)
+  Yeah, they're all in that Slack message.
+
+2:06 - Alex Lumley
+  I copied and pasted everything. Okay.
+
+2:09 - James Young (Collab🤝Land)
+  I think I did. Yeah, the agent, it's a GitHub link for Gnosis in terms of market agent tooling. Oh, I did not drop the most recent one.
+
+2:20 - Alex Lumley
+  So James, by the way, you're also in both of these chats. Oh. Okay.
+
+2:29 - James Young (Collab🤝Land)
+  Cool. I'll catch up. Thanks for that. Sure. And in there, I dropped a link to both of the chats.  What is it? I see the Olaf's one, but I don't see the Gnosis one. Okay. I just dropped it.
+
+2:45 - Alex Lumley
+  The Gnosis one is the second one. I meant the chat.
+
+2:51 - James Young (Collab🤝Land)
+  I looked through Telegram. Oh, okay. It's called, sorry, it's called Mother's Sings. Mother's Sings.
+
+2:56 - Alex Lumley
+  Yeah. Okay. Got it.
+
+3:01 - James Young (Collab🤝Land)
+  Oh, wow. Okay. Nice. Okay. Thanks.
+
+3:07 - Alex Lumley
+  Sure.
+
+3:10 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  Yeah, actually, I'm glad that you asked this because, yeah, this was like my biggest question about this prediction markets agent is like, how sophisticated do we want the MVP?  Like, do we want it checking in with an Oracle and doing trustless validation and all that kind of stuff?  Or do we want to just like the admin kind of like, is the trusted person to administer this thing in the background more manually kind of thing?  know what I mean? Like an NDP, for example, is like, say we are doing like a DeFi kind of thing, like price of ETH above 2K in the next like three days.  I set up the poll by Monday, end of day, and then I, as the admin, will go and literally just check the price and I'll be like, it's not, and so I'll say like, it is a no.  And everyone who voted no gets the tokens instead of it being, like, automated and trustless and Oracle-driven kind of thing.  You know what mean? So it's, like, very, like, manual. But then it's still a prediction mark. It's still a mini prediction mark of sorts.  Tash, do you want to add anything to that? Yeah.
+
+4:19 - Natascha Tiotuico
+  For me, the use case started swimming once, like, because how is the workflow for the community manager going to be?  What are we going to input as data? Does he already know or she knows the question and the answers and just asks mother to make it up like a prediction poll?  How do we ensure that we have truthful sources? And I see a lot of use cases, like, if we want the user to use it, it's going to be a whole different spectrum of complexity.  So I'm trying to see... Where is, where can we, like, MVP it down that it still has the good value and showcase?  Like, I like the betting feature that, like, people are trying to look out for something that's being predicted. Do we maybe limit it to a certain source, like, use cookie.fun to, like, also play with the agent, like, the AI agent perspective?  Of education, like, getting people, like, curious on agents and just limit the input because we know, okay, there's a table in cookie.fun, and we can kind of track the numbers automatically if something is achieved.  So, so, we could limit the input to making an MVP, like, what are our options? Where do. I think the fun is not taken away, but it becomes simple for us to implement.
+
+6:17 - James Young (Collab🤝Land)
+  That is a big question, and I think that it's a good one, and I think this is where we need someone product-minded to help us or help me, actually, so that I don't have to focus on that.  I can focus on implementation, but I guess that's part of the kind of background, overarching question as we go through the spec.
+
+6:39 - Natascha Tiotuico
+  So going, like, what would be if we focus on cookie.fun for AI agents? If we took that as a very simplified use case, I think we can sell it to the community.  Hey, this is where we're beta testing, and you're involved in the process. good at it. All And then we can focus on James just doing the, like focusing on the bedding and how to get it from the resource without opening up what could the input be.  So if we close the input, then we can be very focused on just building the function and maybe we get together with somebody who has that prediction market and we can plug their agent in.
+
+7:35 - Alex Lumley
+  So I think this is what, this is the spec part that we started working on yesterday, Tosh, and I think James, I think this is the kind of stuff that James wants us to figure out and have written out.  We started down the hole with OLAS and with SAFE, but I think it's a matter, I think, I think we need to make a decision.  And, and, A word of focus on it. And Jonathan, I believe you have the community-driven spec, right, of like where we should focus?
+
+8:10 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  Yeah, but there could be some more intentionality brought to it, especially with, yeah. Maybe from the campaign perspective.
+
+8:21 - Natascha Tiotuico
+  So I think the campaign is very easy. Even in Mother, we're like a testing ground. We're showing new tech, so it doesn't have to be like fully outblown functionality and very easy barrier.  We're working with like target groups that are in the innovation. They want to just try something new. So for me, it's really important that we use this to, to concentrate on the work.  How does the mother orchestrator work? And what are like the minimum things that we have to fix? For the KPIs measurement, I see the prediction is fun.  People are going to interact. People are going to use their tokens. People are going to engage. If we use the topics within AI agents, then we will also educate them, like make them curious to look into agents and everything.  So I think all these measurements will lead to a very organic growing community, a very curious community. So I think that makes sense.
+
+9:43 - Alex Lumley
+  So just to help us kind of lean the plane a little bit, I think that makes sense for us to focus, to scope down the prediction margin, prediction market agent to focus on like cookie.fun.  As long as you think that'll be something that are. And as long as Jonathan, you think that there's a campaign we can build around that, if that's the case, and if both those assumptions are correct, then we just need to have the spec of what that cookie.fund prediction market agent should do and what the user flows will look like.  And we have that Tosh from what we wrote down yesterday from what James asked for, and that would just be the next step.  And I don't think we have to discuss that. Maybe we can just work on it, either partner, write the spec right now so James can have it when he wants to work on it this weekend, or we can just work on it async, whatever's the fastest.
+
+10:40 - Natascha Tiotuico
+  So Jonathan already did some good changes into the spec document. Yeah, and have some more I can put in as well.
+
+10:48 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  I just, I actually really wanted to touch base with about whether we were doing this as an actual prediction market or if we were going to create some fun MVP version.  But I actually heard, and this is up to, I guess, this is the product decision, is like, what I heard and what you shared, Ash, is like, it almost would be better to start with like a quiz agent based on what you shared.  Like, the whole idea of a prediction market is that you're taking real-world scenarios and you're making bets on whether they're going to happen or how much they're going to happen.  You know what I mean? Like, that's the juice. It's just like, I think that's makes it more exciting. It's like gambling.  It's betting, right?
+
+11:30 - Alex Lumley
+  So, and Jonathan, from what you're saying, going, like, now that I think we understand a little bit more about the quiz agent, I think a lot of the reason why I initially pushed for the prediction market that we should focus on that was because the assumption was OLAS or SAFE would have something build out that we could just leverage.  Okay, got it. And I don't think they don't. And so, and so I think given that new information, it kind of sounds like my understanding, and you guys know more because you guys looked at the quiz document, that that might be easier.  Thank you. Yeah, I mean, I'm not overly technical, but I think it's easy.
+
+12:03 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  There are already Discord bots that do quizzes, and quizzes are just, you know, a series of questions with true-false statements and stuff like that, so.
+
+12:12 - Alex Lumley
+  So then, if that's the case, then could you guys drop the prediction market agent spec and the quiz agent spec?  And what I would propose we do is, because I think James wants to work on these this weekend, what we could do is we could just review them now with the goal of having something done, like a spec done well enough, where James can actually go and work on it this weekend if you want.  let's see. Let's take a look at them.
+
+12:36 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  I think, though, I think they're both in pretty decent shape already, the prediction market one. I think we just need to make some design choices.  Well, I'm just going to grab my iPad.
+
+12:47 - Alex Lumley
+  Okay, cool.
+
+12:50 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  And then the quiz one, I think it's also in pretty good shape. Tash has been working on that, so I think it's already mostly done.  Who's the judge of done?
+
+15:00 - James Young (Collab🤝Land)
+  We or mechanics when it comes to a prediction market that are outside the scope of the technical feasibility like market volume and all of that stuff.  And so what I was thinking with prediction market was really just having kind of a placeholder. It's almost like a toy prediction market.  Then that can then be dropped and replaced because Polymarket has an API. And so you can, yeah, so that you can actually, you can call in the information they need to get.  Oh, okay. That's all we really need then.
+
+15:35 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  And then we're, we have our own ecosystem for like managing these bets, right? That are, cause they're a test on tokens.  We wouldn't be able to really do that on Polymarket anyway. Right.
+
+15:44 - James Young (Collab🤝Land)
+  But we can pick the content for those that are creating markets from Polymarket, things like that. But these are kind of my unknowns.  But this is where my mind goes. If we were to do the prediction market, I don't have. It's strong opinion when it comes to prediction market versus quiz, and I think in this call, we can then better scope out kind of what the technical feasibility is, but I'll just let you know kind of for context, I was just thinking about reskinning the Discord poll API, which has a lot of that functionality, and so it is more intricate, and it kind of can become an octopus, as Tasha was saying.  But I think the first implementation should be simple from a whole API perspective. I hear my own echo. Alex, do mind muting?
+
+16:42 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  Oh, yeah, sure. Thanks.
+
+16:44 - James Young (Collab🤝Land)
+  And then, but when it comes to the quiz agent, I think like it's simple to create like buttons, yes and no, and like creating quizzes and things like that.  So, you know, at first blush, at least the first iteration, the first step, the difference between care. want are not to in  Like, a prediction market, toy prediction market agent, or whatever you want to call it, and a quiz agent, I kind of think of them as the same level of effort.
+
+17:17 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  Okay. So why don't I... Yeah, so go ahead, Alex.
+
+17:23 - Alex Lumley
+  Oh, I was going to say, I think, like, if maybe the biggest question is, for the quiz agents, James, have you read the spec for the quiz agent?
+
+17:34 - James Young (Collab🤝Land)
+  I went through it, maybe we could just do it right now, real quick.
+
+17:40 - Alex Lumley
+  Because if I remember, James, the things you wanted were, you wanted like a campaign spec, you wanted basically user flow specs, then like pseudomath, or like pseudocoded, like wherever we could.  We have, one second. Because really, my questions come down.
+
+18:01 - James Young (Collab🤝Land)
+  What is the transaction interaction? So like I was saying, if it's a quiz, are people placing money when they're doing the quiz?  If that's true, then it's a little bit more complicated versus just having a quiz and then I don't know how payment happens or what the payment flow there is.  That's really my questions and that's where it comes, what I would want to know about like the user flow and kind of what the payout is.  This is something that, you know, we don't typically think about unless you're like building out like financial debt. What I'm really wanting to understand is that transaction interaction.  If people are just voting and then like at the end of the quiz, if it has an expiry, I don't know how people get paid out or where those funds come from or if they pay.  Those are where technically my questions. A lie, because then that's where I have to take the count kit and then map it into a Discord interaction.  That's the majority of the work. Like the UI and everything is pretty straightforward.
+
+19:12 - Alex Lumley
+  So let's focus on the specific question that James had. Tosh, do you have any answers to that?
+
+19:19 - Natascha Tiotuico
+  I could write something together. So for the MVP to push that out, I would do something like we can limit a person.  If it's a community manager or a member creating a quiz will give a pot to win and that allows so many people to participate in the quiz and get seeds.  Like our seeds are not real money at the moment. So I'm not too concerned to just write out a set of rules, test them, see how they work, and then we can change them if we see it's a little bit unbalanced.  It's more to show the use case, okay, a community manager can set up a quiz, or a community member can start to create a quiz.  Maybe he gets, like, tipped by other members for doing a cool quiz. So I could spec out the, how the pot is put together, and then for every, like, correct answer, they get 50.  If it's wrong answered, they get maybe 30, and then when the pot is empty, the quiz is closed to the public.
+
+20:49 - Alex Lumley
+  Would that answer your question?
+
+20:51 - James Young (Collab🤝Land)
+  Yeah, so what I'm hearing is that, like, people are not placing bets, so there isn't this, like, needing to escrow everyone.  If it's a preceded pot, and then at the end of the quiz, whether it's a pot's empty or whatever, it's expiring over a certain date or maybe both, whatever comes first, then you're just sending people funds from one account.  It's a lot easier in terms of implementation because there's no escrowing of funds and then splitting the funds up later and all of that.  It's really, we have the foundation of that already when you go from X and you vote, and then you go back into Discord and you type in your invite code, you are automatically given seeds, that core functionality is there.  I would just map that transaction interaction to the quiz itself. So from an implementation perspective, the less that I have to escrow funds, keep track of those funds, then be able to resolve a market.  agonistines think it's And then be able to know who the winner and losers are and then split those funds out, the easier it is because from an interaction perspective, you're just seeding a pot and then you're splitting that pot.  So it's just instead of many to one escrow and then that escrow count back to many, depending on the winners, it's just one to many, right?  Like one person is seeding a pot and then when that quiz resolves, then you're just splitting the difference and you're just sending it.  Like from a transaction interaction, it's a lot more simple. I hope I'm making sense there or I hope I'm explaining that correctly or, know, simply.  Yeah.
+
+22:40 - Natascha Tiotuico
+  So I would probably put the quiz as part two. So it's an easy, easier lift to get into that.  Like, I think that where the technical feasibility might be like, what kind of input data can we can we put a lot.  If stream link, will it use the transcript and could we like use our live stream videos to create a quiz or does it have to be like a TXT file?  Could we use our blog, like give a link to our blog and create a quiz? Maybe, James, you could guide us what input styles would be useful, like would not like be MVP?
+
+23:31 - James Young (Collab🤝Land)
+  Yeah, so when it comes to like the input, to be able to create a quiz, I think like a link would be not only easier from like a user kind of input perspective.  It's just copy pasta link. I think that on the like agent or on the AI side, there are already models that can like read YouTube videos or blog posts.  Yes, absolutely. And we can, I can prompt an agent to pre-prompt an agent to output something. So I think the easiest thing would be like a text-based link, like a blog post.  I don't think YouTube videos are that much more difficult, but I'd have to research that. But I know off the top of my head, just like a blog link to parse that and then have the agent create questions and, you know, quizzes is pretty straightforward.  All right, I posted the wrong thing.
+
+24:32 - Alex Lumley
+  I meant to say that Discord does not have any of this interaction. And I'm sorry, Polymarket in their Discord does not have any of this interaction, just from a cursory glance, which is actually kind of surprising that they don't have it.  And I was going to check BillyBot to see if they had anything.
+
+24:54 - James Young (Collab🤝Land)
+  Yeah, the main issue there is that I don't know of any other... So project that provides smart accounts without having to leave Discord or Telegram, that's really the kind of value prop on the CollabLAN side that we're bringing to the table.  That unlocks a bunch of things. Yeah.
+
+25:17 - Alex Lumley
+  Sorry, Tasha, I totally stuck in your question. Did James just want to answer your question? Yeah.
+
+25:27 - Natascha Tiotuico
+  So like the minimum of putting like a blog post or something, using that to create a quiz would be a use case enough for me to say, hey, look, community manager, you just have to look for an interesting blog post or use your blog and ask questions, like feed it in and the agent will give you a few questions back.  So I would consider prioritizing that after the mother orchestrator to be our first use case. And test it out.  So that would be after the mother orchestrated the first use case then that I think we should work on.
+
+26:15 - Alex Lumley
+  So what I'd love for us to get to is that by the end of the call, we could have something for James where he feels like, OK, all my questions are answered.  And Tosh and Jonathan, know it's late for you. If we could, if we have enough where James is like, yeah, this is good, I can go and work on it when he has time.  So how can I help you with that, Tosh? Or how can we help you with that? OK, so let's go through this.
+
+26:49 - Natascha Tiotuico
+  Currently. Oh, OK, open questions. So we would work on the open questions. And I can also pull out. James, other questions from the the the recorder.
+
+27:09 - Alex Lumley
+  OK, yeah.
+
+27:13 - Natascha Tiotuico
+  So these are things that James doesn't have to. Um. Program, we would do participation is for like a negative or negative answer.  Um. We can put, for example. Right now we have quite a lot like are we watching the numbers for the seeds or is it.  OK for me to put 100 for a negative answer and 150 for a correct answer. Because we don't want it to like be so far apart that people start cheating.  It's more about the fun and trying to test the mechanism. OK. Then I added. This it's from quiz court, so I did add quiz court to to a discord server and just took like this.  This example I can yeah, I didn't even answer it like the the time went by, so I would take the time component out.  But this is how kind of the interface would look like, and then I will need to do like. Ask, create me a quiz from this blog post and make that workflow so.  Like. Yeah. Yeah. Is it possible, like, would I need to do, like, one request, or can I, like, ask, I want to create a quiz, and then the bot would answer, what is the text you want to quiz on, or send me a link that you want to quiz on, and then I would, like, here I even did it that I have to do the TXT, but here I would send the link instead of the TXT.
+
+29:32 - James Young (Collab🤝Land)
+  Yeah, I would say put it all in a, you know, create a quiz from this link, and then you can call one command.  Okay. Okay. Create.
+
+29:49 - Natascha Tiotuico
+  Create. Create. thought Either. Drop is prettymor Yeah, here I even outscoped the Discord formatter so we can actually remove this to make it beautiful and copy.  The use case example would be that other delivers, we can put a fit like five questions with each three answers.  And one, two, three, four, answer.
+
+31:00 - James Young (Collab🤝Land)
+  And then also, I would also put into that asks command, how much do you want to see the quiz with?  Okay.
+
+31:13 - Natascha Tiotuico
+  Create a quiz with a pot. Would this be natural language or should we put one of those boxes like when we do tipping?  Oh, no, it can be. Let's try and do this all natural language.
+
+31:34 - James Young (Collab🤝Land)
+  Okay. Okay.
+
+31:36 - Natascha Tiotuico
+  With a pot of 10,000 seats. Um. you. I would, I would make everything else fixed, like, non-variable right now, but of course, later on, if we develop the agent, it would be to say how many questions, how many answers, it an open answer and multiple choice, but right now, let's set that all, like, we could even do the seed fixed Yeah, that might be a good option, just to kind of scope this down, one question.
+
+32:40 - Alex Lumley
+  Yeah, that's actually exactly what GigBot does. They set, it can only be just of a token, it can, they, it generally is for $10, it, like, they just make it easy.
+
+32:54 - Natascha Tiotuico
+  Because we can always do better later.
+
+32:58 - James Young (Collab🤝Land)
+  Yeah. Yeah. Cool.
+
+33:05 - Alex Lumley
+  If we finish this out, James, it sounds like this is enough for you to do what you need to do, right?  Yeah, that's right. I'm just going to make it just bare bones.
+
+33:16 - James Young (Collab🤝Land)
+  Just get something out as soon as possible.
+
+33:19 - Natascha Tiotuico
+  Yeah, because I think it's like, as I said, it's more the hype around us delivering something and showing how it could work.  And that spikes imagination and, like, people always do better. So we don't even want to act like we're trying to do something that doesn't exist yet.
+
+33:46 - James Young (Collab🤝Land)
+  Right. And really, this exercise is just to get all of our expectations aligned. Yeah. Because I want to make sure that what I'm building is useful and also...  That usefulness is part of a larger campaign to grow the Mother AI Discord. It's not building just to build.  Yeah.
+
+34:07 - Natascha Tiotuico
+  And I mean, I already see, like, where I can sell other communities our tipping function. And if now Mother also offers activities to, like, help on that, it's going to be great.  Like, we just need to deliver and start. Yeah, just start somewhere. That's the hardest part is to start.
+
+34:30 - James Young (Collab🤝Land)
+  Because you can always iterate. Because once people see something, they'll, like, have 10 million ideas on how to make it better.  Yeah. You kind of want it to suck so that people can give you feedback. Yeah, and that's also what Mother AI is.
+
+34:49 - Natascha Tiotuico
+  Like, we're not presenting them with a finished solution, but there's a bunch of builders in there. And a of people seeing, just wanting to see how should this work.  They're curious. curious. They're They're early adapters in the profile, so we shouldn't be too hard on ourselves to want to make the product perfect.  No, no, because that's not our goal.
+
+35:11 - James Young (Collab🤝Land)
+  We're not here to start another quiz business. No. Okay.
+
+35:16 - Natascha Tiotuico
+  So what would be missing to get started? And we'll be listening on the channels if you have any questions.  But basically, our only variable is we we ask to create a quiz with the link. This link should be a like right now, we're saying the blog link.  Scoping out not YouTube, if you find a quick way to do it with the YouTube. It would leverage our live streams like we could use our live streams to do it, but if it's just a blog link, then.  Find AI agent blog links to start this off.
+
+36:05 - James Young (Collab🤝Land)
+  Yeah, let's see. Kind of just reference design and see where it goes instead of having to prematurely anticipate what features there are.  you kind of, I mean, the point of this, again, is to kind of make sure that it sucks enough where people give us feedback, where it's useful enough, where people are like, oh, I see it.  But it sucks enough so that, you know, people want to add to it or we generate hype. I don't know if you remember, there was a band called AHA.  They had this initial music video take on me. And it really, they purposely made it suck so that people could, like, see the potential in this music video and the song.  And then they, like, did, they invented photoscoping and a lot of technical stuff based off of the initial kind of sucky things.  And in the same way, I think that's what, there's a side kind of. Okay. Thank This is reaction that we expect for this to happen.  The only other thing is what I'm wanting to make sure we get right is the transaction interactions. So is it time-based where the poll ends and whatever comes first, the time-based ending or the pot being cleared?  And then how does that resolve itself? Do people, if they answer correctly, they get the seeds right away? You know, it's these kind of nuanced details that it's hard to think about because we don't think about on-chain transactions in chat.  So we don't think about what is that transaction interaction. And then with that, it's like, you know, there's some detail where the bot can send an ephemeral message, say, because it's going to take like two or three seconds for that transaction on-chain to clear, then the bot can send an ephemeral message to that user, oh, calculating your score or the response.  And when it's calculating that response, it's actually sending an on-chain transaction, and the response from an ephemeral message perspective can be things like, okay, this is how many seeds you've got, and then it could have the transaction hash on base scan or something like that.  It's those type of nuanced details as part of the UI, UX.
+
+38:22 - Alex Lumley
+  What I propose, Tosh, is we just do the 24 hours, maybe 48 hours, at least early on. 48 hours for pot to end, or for, this is really a quiz pool, I guess we're going to call it, to end, and then, like, 48 hours for it to end, and then the other part was this, this, uh.
+
+38:52 - Natascha Tiotuico
+  Another question would be, what about if, like, uh, more people answer than 10,000 seats, do we need to? Be aware of the ecosystem right now, or should we just like keep it open and say, let's do it for 48 hours and as many participants do we want to?
+
+39:15 - Alex Lumley
+  We'll just do 48 hours for now because I think like that'll allow us to do a couple ones next week.  Right. And we can start it next week. But I think if we just keep it very constrained, we can do it like automatic seeds for participation slash negative energy be 100 seeds, 150.  And then the question was like ending. Right, James? How does this end?
+
+39:38 - James Young (Collab🤝Land)
+  How the... It could end when the pot is drained too. It doesn't have to have a time either. Okay.
+
+39:49 - Natascha Tiotuico
+  So, or like 48 hours to cut it, if not enough participate, then it's just cut after 48 hours or until pot is empty.
+
+40:01 - Alex Lumley
+  So correct if I'm wrong, Tosh, these parts are really about the quiz pool interaction, right? And above, it's about the creation of the quiz pool types.
+
+40:29 - Natascha Tiotuico
+  And then, actually, to make it curious, I would love that when the quiz ends, that's when everybody gets paid out, because it makes the suspense maybe higher than if they talked before, oh, I got 100 seeds, I did it right.  And the answer is, everybody's more reserved, maybe even, because they don't know how it works. this? Thank slide.
+
+41:00 - Alex Lumley
+  And we'll also have you coming back after a few days to find out, you know, what happened, and just a PC card there, and then all of the participants are paid out, and what was the math for the, like, divvying up, divvying, I don't know, it's called divvying up the pool.  What was the math for divvying up the pool? What is divvying?
+
+41:30 - James Young (Collab🤝Land)
+  Divvying up, like splitting up, but I don't think you would need to split because it's not like a prediction market where there's winners and losers and everyone contributing to it.
+
+41:39 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  That's that amount, right, that we're putting into But it costs $10,000 for the seeds, right?
+
+41:45 - Alex Lumley
+  And if there, if every positive, there's an automatic seeds for it, right, so there's 100 seeds above, and then negative answers is 150.  I guess my understanding was that that was impacting the number, like, if more people come in. Then there will be less seeds given out, right?  But here I added that until the pot is empty.
+
+42:08 - Natascha Tiotuico
+  So either 48 hours, if like not enough participants are, or every time somebody like does the quiz, guess James would say minus 100 or minus 150 and see when the pot is drained or what's easier.
+
+42:25 - James Young (Collab🤝Land)
+  Well, mean, this is you getting into like a little bit of like quiz game theory here, right, where you can say, here's the pot, it's like 100 seeds, for example, right?  And if you guess it right or wrong, then you get the seeds. But if you don't have like a set amount that you get for answering right or wrong, and it's split at the end, then it like a game theory perspective, I would imagine I wouldn't want to tell someone else the right answer because that means I get less seeds at the end.  there's a thing making a Wordle, right? Like however, whatever the interactions of like Wordle or one of those are.
+
+43:00 - Alex Lumley
+  It's kind of what we're doing, right? But what do you mean by Wordle? Like, you know those games that people play that you get like one a day where it's like Wordle and some other ones like that, a crossword or whatever?  We're basically saying we don't want everyone to tell the answers, but we want everyone to be like, yo, did you figure out today's Wordle is kind of like a thing that people do.  Got it, yeah, yeah, yeah.
+
+43:27 - James Young (Collab🤝Land)
+  I think with Wordle and things like that, like, but there's money behind it or fake money behind this. And so there's an incentive not to share the correct answer.  So, I mean, this is where it's like the kind of transaction interaction really changes the nature of the game, right?  So that's why the financial aspect of it really changes how you interact or how the game is played. So we can  Either do, I think one of two things, like, you know, we can save the answers until the end where people have to come back, and you give everyone a set amount until the pot is emptied or time is expired, or you have a time expiration, and then there's logic where we, like, depending on how many people participate in the quiz, we give out those answers, we give out the pro rata share of what's in the pot for right or wrong.  So you can say, there's, like, 75% for right answers, and then, like, 25% for wrong answers, and you split the pot right and wrong, and then everyone that gets it right, they get from a larger sub pot, you know.  So this is where the interaction, transaction interaction, really makes a difference. That's what I really want to try and understand, and this is where I ask about the math and all of that.
+
+44:53 - Alex Lumley
+  So, so, so my, for some reason, what seems like the easiest to do is, like, um, it This is to make it rather than 48 hours, make it 24 hours because there's something about the fact of it being a day, right?  Secondly, it's that maybe we just straight divide it up like the winner split, right? Split evenly across everyone, whoever got the correct answer and anybody who got the wrong answer, we're not going to ding you and not for this first week.  We split it as soon as time is done and we'll go from, and that's good enough for a V1 to me.  Yeah.
+
+45:31 - James Young (Collab🤝Land)
+  Well, Tasha, I think, was saying that you want people to participate and not just win. So if you participate, you know you're going to get something anyway, where it's like the winner gets 150 and the loser gets like 100.  And honestly, I think that's awesome. was just, for the simplicity of it, I was just saying like, we'll figure out the game mechanics, we'll have lots of ideas.
+
+45:50 - Alex Lumley
+  James, I know James will have lots of ideas coming from a gaming background. But just for the simplicity of it, I was thinking just winners get whatever.  Okay. Thank you. What do you think? I mean, how does it? Yeah.
+
+46:07 - Natascha Tiotuico
+  So, I'm trying to. Because with this, I first liked it, but then if it's an easy answer and there's few that give negative answers, I actually get more for doing the negative answer.  So, so that was that math almost tricked me. But it would be a fun outcome, right? I think like now we come into game theory, but we don't want to make it too complicated.  So, would we divide it by. I would have to think about this.
+
+46:56 - James Young (Collab🤝Land)
+  Yeah. As long as I know what the interaction is like, the numbers can be. All So we don't have to get stuck on the numbers, the details of the numbers, but then if we're going to do this, do we want to, like, have them come back to be able to, like, to check if their answer was right or wrong?  This, I think, is really good from, like, a psychological perspective. If, I think what Alex is saying, it's like a daily quiz.  So you have a reason to go back every day to the Mother AI Discord and interact because you'll get something.  So, like, daily quiz, and then you have to, like, scroll up back to, like, see results, and then in the results, you get to claim if it's right or wrong.
+
+47:41 - Natascha Tiotuico
+  Ah, yes, claim.
+
+47:43 - Alex Lumley
+  Jonathan, one of the things I was putting just above this was, like, the comms. I think it'd be worthwhile for you to take a stab at writing out what the comms would be of how we explain this because I think that will help us find any holes in terms of how we're setting this up.  Thank you. you.
+
+48:06 - James Young (Collab🤝Land)
+  The thing about Discord is that if it's a bot, it cannot send messages. It can only reply to messages.  That's an interaction limitation of Discord. So we can't have, like, the mother agent send a message, hey, the quiz has ended.  Here, you know, click here for the results. It has to be, like, all interactions need to be initiated by a user.  That's how Discord, like, tamps down on, like, spam.
+
+48:35 - Alex Lumley
+  And I guess it probably can't be individual. Like, this is one of the open questions that I had was, how do we make it so that Alex is interacting only with the quiz agent, and you, James, can't see my response to the quiz agent?
+
+48:51 - James Young (Collab🤝Land)
+  Yeah, you can send an ephemeral message back. Okay, that's what you're talking about. Gotcha. It's a private message in a public channel.  In your...
+
+48:59 - Alex Lumley
+  In your... Point about an announcement saying, like, a user can't see that their claims are up. They will have to, again, ask mother, hey, how much can I claim?
+
+49:13 - James Young (Collab🤝Land)
+  Or what happens is that once the quiz is ended, the bot can edit the message and say, oh, you know, withdraw your funds now or winners or whatever now.  Yeah, I think, and maybe, I don't know if this is true, I have to look into it. Maybe when it's editing the message, it can tag the winners.  So these are the kind of the interaction kind of nuances that you get into the weeds on that, like, kind of matter when I code this.  Yeah.
+
+49:59 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  I mean there's. This is going to be a great agent.
+
+50:06 - Natascha Tiotuico
+  I'm really excited. I think this is such a good idea and there's like transactions all through it.
+
+50:10 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  Like, it's so good.
+
+50:12 - Natascha Tiotuico
+  And the best is even when we transport it to different communities, they just have to change the link. They like the whole education and engagement and curiosity around topics is the variable.  So, so we can put a different link for other interests. Like even when we have builders and farmers, uh, builders, we can use like docs or whatever, uh, versus, so it's very versatile.  I think that's the English word through the Collabland bot and the mother registry.
+
+50:52 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  There's your messaging. Where So.
+
+51:00 - Alex Lumley
+  Oh, we probably have to split out the user interactions and the bot discord interactions, right? Oh, wait second.
+
+51:20 - Natascha Tiotuico
+  Sorry, my head is still spinning around the, my mathematical brain. love to do these kind of things. then I haven't done it for so long.  James, did you know that Tosh studied AI and robotics?
+
+51:44 - Alex Lumley
+  Oh, wow. I had no idea.
+
+51:46 - Natascha Tiotuico
+  I did my master's at the Technical University of Berlin. My dream was always to create one of those toy petties that kids could take around.  And they would always make like fascinating stories. Around explaining, like teaching the child, but then it was like too early when I, when I graduated and then I became a project manager and so far from like implementation.
+
+52:19 - James Young (Collab🤝Land)
+  Just wait until the Boston Robotics agent comes and in Discord you can tell it like, you know, guard your house or something.  Yeah, well, well in the dilabor, so where I, I was a student helper.
+
+52:33 - Natascha Tiotuico
+  We already had an AIBO back then, recognize the situation. we had these test people sitting at a table, having a romantic dinner.  Well, kind of like a blind date. And then the robot, depending on the mood, if they're getting along, would go and turn on a candle.  Or if they're not getting along, it would kind of say a joke so that like the intensity is loosened up.  So we actually did a study, like, one of our students did a study on that, how bots can kind of interact with the human situation.
+
+53:10 - Alex Lumley
+  That's wild.
+
+53:12 - Natascha Tiotuico
+  My kind of side project is there are these MRI help kits that you can buy.
+
+53:19 - James Young (Collab🤝Land)
+  They're kind of costly, but they're going down in price, where it actually can read brainwaves. And so you don't even have to chat anymore, and then you can, like, interact because they've done many studies, and it's conclusive.  No matter what culture or language you speak, if you're happy, sad, these emotions, they trigger the same parts of the brain.  So it's not cultural. So you can actually have a universal kind of throwing your thoughts to an agent or throwing your emotions to an agent.  So anyway, Facebook has, like, done a recent study a month ago where actually, as you're typing and as you're thinking, the AI takes in both.  And so it's wild.
+
+54:07 - Natascha Tiotuico
+  So I think we're almost done, Tosh.
+
+54:11 - Alex Lumley
+  What I'm doing is I'm just taking the notes that you wrote up, and I'm checking them with ChatGPT to basically figure out what else we're missing.  There's another tool that I sometimes use called ChatPRD that is also quite good. But I just want to check if there's gaps, and then if we could make this a little bit more user-friendly.
+
+54:30 - James Young (Collab🤝Land)
+  Yeah, the only thing that I would say is, like, when the quiz closes, how does the bot respond knowing the limitation of the bot can't send a message?  It can only edit a message, so there needs to be a call to action or something where the user, do they, like, just say results?  Or, I don't know, you know, or there's an, the bot can edit it. search. touch. keep It's an initial quiz message, and it can then edit it and say there'll be a results button or something, and then what does that interaction look like?  Do we have that user claim the proceeds? So the bot can send an ephemeral private message in a public channel that, like, oh, okay, you can withdraw or claim now.  And then the bot can respond in the public channel as a public message, so and so just claim blah, blah, seeds, just to kind of show and people can know publicly who's winning and who's losing the quiz or something like that.  So I think it's that response part after the quiz ends that we haven't really talked about. Yeah.
+
+55:55 - Natascha Tiotuico
+  I would make it as easy as possible at the beginning. Maybe people just come back. I easy Check and like claim they see the right or wrong answer if they did right or wrong and get the seats privately.  Then we don't then we don't have to like deal with what's public and here and there we can.
+
+56:19 - James Young (Collab🤝Land)
+  And we we can iterate on that later. Yes, let's iterate on that later.
+
+56:25 - Natascha Tiotuico
+  I think I got the matter mathematical formal. So I did like the pot divided by. One and a half times the winners and one time the losers that creates unit.  So winners get one and a half time the unit. And losers get one unit. Cool. That works. I, I I  I think that that makes mathematical sense. I mean, we might have 0.5 left, but I think we can kind of do.  Put that under the rug. Cool. Um.
+
+57:30 - James Young (Collab🤝Land)
+  Right. I can start on this, like, tomorrow morning. Um, I think I have enough, and there's probably some nuanced questions, some fine, detailed interaction questions I'll have that I'll post ASIG.  I just have the kids tonight, Anjali went to Dubai, so, like, I'm daddy daycare. So I'll get to this tomorrow.  Yeah, that's nice. Then we also have testers when you're done.
+
+57:57 - Natascha Tiotuico
+  Yeah. Yeah. Thank you.-hmm.
+
+58:01 - Alex Lumley
+  Awesome. Thanks, James. And then, Tasha, are you good to finish up James' last question? I'm going to write it out.  I'm getting it from the recorder. Are you good to write something out to answer that? Yes. Let me add a question in here.  I'll it from Fellow. Cool. And then I'll just tag you as the please complete this. Okay.
+
+58:28 - Natascha Tiotuico
+  Great.
+
+58:33 - Alex Lumley
+  And here's the question. Awesome. Could I have enough to get me going on creating the quiz?
+
+58:40 - James Young (Collab🤝Land)
+  And we'll buy you time while I'm doing that to, like, fill out this how do people claim and all of that interaction at the end when the quiz resolves.  Awesome. Thanks, James.
+
+58:52 - Alex Lumley
+  Thank you. Thanks. Have a good weekend, everyone. And actually, Coach, do you have a minute? having Thanks, Thanks Yeah, yeah, I have 10 more minutes.  Cool.
+
+59:02 - Jonathan Miller (miller.d.jonathan@gmail.com)
+  I'll just give you a call, I guess, on Telegram. Okay, sounds good.
+
+59:06 - Alex Lumley
+  All right, thanks, Tasha. Okay, see you, team. Thanks, everyone.
+
+59:09 - James Young (Collab🤝Land)
+  Bye. Thank
